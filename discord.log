@@ -1,0 +1,368 @@
+2026-10-17 03:20:13,939:INFO:discord.client: logging in using static token
+2026-10-17 03:20:15,819:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b989a39b9c90ef70c138e13e7cfc2e80).
+2026-10-17 03:25:47,242:INFO:discord.client: logging in using static token
+2026-10-17 03:25:48,603:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b5c59f7e04e21929c6a2157b663e7e3a).
+2026-10-17 03:28:10,003:INFO:discord.client: logging in using static token
+2026-10-17 03:28:11,623:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b45966bfc87001c0844a92ac53a14008).
+2026-10-17 03:30:43,456:ERROR:discord.client: Ignoring exception in on_member_remove
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\welcome.py", line 51, in on_member_remove
+    await channel.send(f"🙋‍♂️ {member.display_name} 님이 서버를 떠나셨습니다.")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50001): Missing Access
+2026-10-17 03:32:45,974:ERROR:discord.app_commands.tree: Ignoring exception in command 'lock'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\security.py", line 167, in lockdown
+    await channel.set_permissions(interaction.guild.default_role, overwrite=overwrite)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1030, in set_permissions
+    await http.edit_channel_permissions(
+        self.id, target.id, str(allow.value), str(deny.value), perm_type, reason=reason
+    )
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'lock' raised an exception: Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+2026-10-17 03:33:02,977:ERROR:discord.app_commands.tree: Ignoring exception in command 'unlock'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\security.py", line 176, in unlock
+    await channel.set_permissions(interaction.guild.default_role, overwrite=overwrite)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1030, in set_permissions
+    await http.edit_channel_permissions(
+        self.id, target.id, str(allow.value), str(deny.value), perm_type, reason=reason
+    )
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'unlock' raised an exception: Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+2026-10-17 03:36:56,622:INFO:discord.client: logging in using static token
+2026-10-17 03:36:58,027:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 9570704f3a6d05d8659ed29ac4fb67fc).
+2026-10-17 12:47:57,847:INFO:discord.client: logging in using static token
+2026-10-17 12:47:59,407:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a890226b71227c0850222e2e55627635).
+2026-10-17 12:49:02,426:INFO:discord.client: logging in using static token
+2026-10-17 12:49:03,827:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: c50082662507da735e66b27bd87670a7).
+2026-10-17 14:29:23,915:INFO:discord.client: logging in using static token
+2026-10-17 14:29:25,685:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: a0b6dacd228ce1f3fd69fede959a4756).
+2026-10-17 15:32:32,400:INFO:discord.gateway: Shard ID None has successfully RESUMED session a0b6dacd228ce1f3fd69fede959a4756.
+2026-10-17 16:34:11,578:INFO:discord.client: logging in using static token
+2026-10-17 16:34:13,402:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: b89cfb111a9add9156ba0b69d32dc582).
+2026-10-17 16:34:38,245:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947975405610 responded with 429. Retrying in 0.33 seconds.
+2026-10-17 16:34:38,827:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947975405610 responded with 429. Retrying in 0.71 seconds.
+2026-10-17 16:34:38,984:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918951037501542 responded with 429. Retrying in 0.55 seconds.
+2026-10-17 16:34:39,441:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918953214218301 responded with 429. Retrying in 0.30 seconds.
+2026-10-17 16:34:39,826:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947975405610 responded with 429. Retrying in 0.72 seconds.
+2026-10-17 16:34:39,871:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918954967433280 responded with 429. Retrying in 0.66 seconds.
+2026-10-17 16:34:40,074:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918953214218301 responded with 429. Retrying in 0.50 seconds.
+2026-10-17 16:34:40,785:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947975405610 responded with 429. Retrying in 0.75 seconds.
+2026-10-17 16:34:40,850:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918953214218301 responded with 429. Retrying in 0.72 seconds.
+2026-10-17 16:34:41,784:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947975405610 responded with 429. Retrying in 0.75 seconds.
+2026-10-17 16:34:41,852:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918953214218301 responded with 429. Retrying in 0.69 seconds.
+2026-10-17 16:34:42,253:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918943537963020 responded with 429. Retrying in 0.30 seconds.
+2026-10-17 16:34:42,410:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918942854287395 responded with 429. Retrying in 0.30 seconds.
+2026-10-17 16:34:42,815:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918943537963020 responded with 429. Retrying in 0.72 seconds.
+2026-10-17 16:34:42,955:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918946738348105 responded with 429. Retrying in 0.58 seconds.
+2026-10-17 16:34:42,973:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918942854287395 responded with 429. Retrying in 0.56 seconds.
+2026-10-17 16:34:43,299:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947673677935 responded with 429. Retrying in 0.30 seconds.
+2026-10-17 16:34:43,524:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918942804082770 responded with 429. Retrying in 0.30 seconds.
+2026-10-17 16:34:43,825:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918943537963020 responded with 429. Retrying in 0.72 seconds.
+2026-10-17 16:34:43,833:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918946738348105 responded with 429. Retrying in 0.72 seconds.
+2026-10-17 16:34:43,856:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947673677935 responded with 429. Retrying in 0.69 seconds.
+2026-10-17 16:34:44,069:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918942804082770 responded with 429. Retrying in 0.47 seconds.
+2026-10-17 16:34:44,784:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947673677935 responded with 429. Retrying in 0.75 seconds.
+2026-10-17 16:34:44,797:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918942804082770 responded with 429. Retrying in 0.75 seconds.
+2026-10-17 16:34:44,822:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918943537963020 responded with 429. Retrying in 0.71 seconds.
+2026-10-17 16:34:45,787:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918942804082770 responded with 429. Retrying in 0.75 seconds.
+2026-10-17 16:34:45,790:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918947673677935 responded with 429. Retrying in 0.75 seconds.
+2026-10-17 16:34:46,811:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918942804082770 responded with 429. Retrying in 0.73 seconds.
+2026-10-17 16:34:48,963:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918970822041622 responded with 429. Retrying in 0.57 seconds.
+2026-10-17 16:34:49,186:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918972277461004 responded with 429. Retrying in 0.35 seconds.
+2026-10-17 16:34:49,789:WARNING:discord.http: We are being rate limited. DELETE https://discord.com/api/v10/channels/1560073632628080743/messages/1560918972277461004 responded with 429. Retrying in 0.75 seconds.
+2026-10-17 16:42:36,757:INFO:discord.client: logging in using static token
+2026-10-17 16:42:38,418:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 87abf97479b7b7d6c2479bf546b9eb22).
+2026-10-17 16:43:36,280:INFO:discord.client: logging in using static token
+2026-10-17 16:43:37,548:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: dbdd6f89688612956e2d9ca0b299440a).
+2026-10-17 16:44:14,953:INFO:discord.client: logging in using static token
+2026-10-17 16:44:16,340:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 86911f7ec83eb0467be14ff96146900d).
+2026-10-17 16:50:55,851:INFO:discord.client: logging in using static token
+2026-10-17 16:50:57,672:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: ddb430ed0df3d3d07875a1092318bc64).
+2026-10-17 16:57:56,469:INFO:discord.client: logging in using static token
+2026-10-17 16:57:58,174:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 8ed7f711daa3abb5b19638deabce4979).
+2026-10-17 16:58:38,489:ERROR:discord.client: Ignoring exception in on_member_remove
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\welcome.py", line 51, in on_member_remove
+    await channel.send(f"🙋‍♂️ {member.display_name} 님이 서버를 떠나셨습니다.")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50001): Missing Access
+2026-10-17 16:59:26,336:ERROR:discord.app_commands.tree: Ignoring exception in command 'reset'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\admin.py", line 24, in reset_channel
+    deleted = await interaction.channel.purge(limit=None)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\channel.py", line 714, in purge
+    return await discord.abc._purge_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 222, in _purge_helper
+    await strategy(to_delete, reason=reason)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\channel.py", line 639, in delete_messages
+    await self._state.http.delete_messages(self.id, message_ids, reason=reason)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'reset' raised an exception: Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+2026-10-17 16:59:30,011:INFO:discord.client: logging in using static token
+2026-10-17 16:59:31,547:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 447b3d3e302050029ca5d32cf1596f52).
+2026-10-17 17:01:42,253:ERROR:discord.app_commands.tree: Ignoring exception in command 'reset'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\admin.py", line 24, in reset_channel
+    deleted = await interaction.channel.purge(limit=None)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\channel.py", line 714, in purge
+    return await discord.abc._purge_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 222, in _purge_helper
+    await strategy(to_delete, reason=reason)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\channel.py", line 639, in delete_messages
+    await self._state.http.delete_messages(self.id, message_ids, reason=reason)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'reset' raised an exception: Forbidden: 403 Forbidden (error code: 50013): Missing Permissions
+2026-10-17 17:02:19,907:ERROR:discord.client: Ignoring exception in on_member_remove
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\welcome.py", line 51, in on_member_remove
+    await channel.send(f"🙋‍♂️ {member.display_name} 님이 서버를 떠나셨습니다.")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50001): Missing Access
+2026-10-17 23:15:15,537:INFO:discord.client: logging in using static token
+2026-10-17 23:15:17,045:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 7f09cf6380f56c9561c7f38061b11efa).
+2026-10-17 23:21:07,474:INFO:discord.client: logging in using static token
+2026-10-17 23:21:09,095:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 846c56b403428e84a2c938436ba63027).
+2026-10-17 23:28:50,304:INFO:discord.client: logging in using static token
+2026-10-17 23:28:51,587:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: be35ed0c851bd2d4ca8a89a26eee1fd0).
+2026-10-17 23:28:55,526:ERROR:discord.client: Ignoring exception in on_member_remove
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\welcome.py", line 51, in on_member_remove
+    await channel.send(f"🙋‍♂️ {member.display_name} 님이 서버를 떠나셨습니다.")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50001): Missing Access
+2026-10-17 23:29:13,561:ERROR:discord.app_commands.tree: Ignoring exception in command '내경고'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\security.py", line 189, in my_warnings
+    await interaction.response.send_message(f"⚠️ 현재 {interaction.user.mention} 님의 누적 경고는 **{warns회}** 입니다.", ephemeral=True)
+                                                                                                     ^^^^^^^
+NameError: name 'warns회' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '내경고' raised an exception: NameError: name 'warns회' is not defined
+2026-10-17 23:30:09,894:ERROR:discord.app_commands.tree: Ignoring exception in command '내경고'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\security.py", line 189, in my_warnings
+    await interaction.response.send_message(f"⚠️ 현재 {interaction.user.mention} 님의 누적 경고는 **{warns회}** 입니다.", ephemeral=True)
+                                                                                                     ^^^^^^^
+NameError: name 'warns회' is not defined
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command '내경고' raised an exception: NameError: name 'warns회' is not defined
+2026-10-17 23:31:24,169:INFO:discord.client: logging in using static token
+2026-10-17 23:31:25,475:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: ecb4c053124fce7b91a8b20e1e3150d2).
+2026-10-17 23:31:46,172:ERROR:discord.client: Ignoring exception in on_member_remove
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 508, in _run_event
+    await coro(*args, **kwargs)
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\welcome.py", line 51, in on_member_remove
+    await channel.send(f"🙋‍♂️ {member.display_name} 님이 서버를 떠나셨습니다.")
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1706, in send
+    data = await state.http.send_message(channel.id, params=params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50001): Missing Access
+2026-10-17 23:32:23,952:INFO:discord.client: logging in using static token
+2026-10-17 23:32:25,316:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 8050cc5d06a209e1de4ddb9075e34201).
+2026-10-17 23:33:43,192:INFO:discord.client: logging in using static token
+2026-10-17 23:33:45,002:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: ab9d50b62f55ba65ca2678768ac3f127).
+2026-10-17 23:34:15,466:WARNING:discord.http: We are being rate limited. POST https://discord.com/api/v10/channels/1561021969367961762/messages responded with 429. Retrying in 0.49 seconds.
+2026-10-17 23:34:16,238:WARNING:discord.http: We are being rate limited. POST https://discord.com/api/v10/channels/1561021969367961762/messages responded with 429. Retrying in 0.73 seconds.
+2026-10-17 23:36:22,319:ERROR:discord.app_commands.tree: Ignoring exception in command 'reset'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 858, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\ADMIN\Downloads\discord_bot\cogs\admin.py", line 24, in reset_channel
+    deleted = await interaction.channel.purge(limit=None)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\channel.py", line 714, in purge
+    return await discord.abc._purge_helper(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<9 lines>...
+    )
+    ^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 191, in _purge_helper
+    async for message in iterator:
+    ...<24 lines>...
+        ret.append(message)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 2050, in history
+    data, state, limit = await strategy(retrieve, state, limit)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\abc.py", line 1992, in _before_strategy
+    data = await self._state.http.logs_from(channel.id, retrieve, before=before_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 772, in request
+    raise Forbidden(response, data)
+discord.errors.Forbidden: 403 Forbidden (error code: 50001): Missing Access
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 884, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 877, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'reset' raised an exception: Forbidden: 403 Forbidden (error code: 50001): Missing Access
+2026-10-17 23:36:40,144:INFO:discord.client: logging in using static token
+2026-10-17 23:36:41,544:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 37f1b6a5bd6512b991b5adbbbf6b8046).
+2026-10-17 23:39:22,247:INFO:discord.client: logging in using static token
+2026-10-17 23:39:23,562:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: f8e58678e1d331d08adcca420c60010c).
+2026-10-17 23:41:55,901:INFO:discord.client: logging in using static token
+2026-10-17 23:41:57,240:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 2af708a653ff17275c76e6f1bad01810).
+2026-10-17 23:43:59,621:INFO:discord.client: logging in using static token
+2026-10-17 23:44:00,827:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 1c9f6e036e4c42101803da303a386791).
+2026-10-17 23:46:19,699:INFO:discord.client: logging in using static token
+2026-10-17 23:46:21,075:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 3c68409344e44904b66adc02761155ee).
+2026-10-17 23:49:01,490:INFO:discord.client: logging in using static token
+2026-10-17 23:49:03,051:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 60cc3cea9d65b40c2eba5998ee5f53b6).
+2026-10-17 23:50:04,580:ERROR:discord.app_commands.tree: Ignoring exception in command 'reset'
+Traceback (most recent call last):
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\tree.py", line 1302, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 880, in _invoke_with_namespace
+    if not await self._check_can_run(interaction):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 1018, in _check_can_run
+    return await async_all(f(interaction) for f in predicates)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\utils.py", line 723, in async_all
+    for elem in gen:
+                ^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\commands.py", line 1018, in <genexpr>
+    return await async_all(f(interaction) for f in predicates)  # type: ignore
+                           ~^^^^^^^^^^^^^
+  File "C:\Users\ADMIN\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\app_commands\checks.py", line 340, in predicate
+    raise MissingPermissions(missing)
+discord.app_commands.errors.MissingPermissions: You are missing Administrator permission(s) to run this command.
+2026-10-17 23:52:37,145:INFO:discord.client: logging in using static token
+2026-10-17 23:52:38,760:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 94f365cb8b1724080e581a38931f7efb).
+2026-10-17 23:52:40,731:INFO:discord.client: logging in using static token
+2026-10-17 23:52:42,336:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: 5efca078214a9a0e0b1b76e92a952525).
