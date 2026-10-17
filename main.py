@@ -48,4 +48,5 @@ async def reload_cog(interaction: discord.Interaction, cog: str):
     except Exception as e:
         await interaction.response.send_message(f"❌ 재로드 실패: {e}", ephemeral=True)
 
-bot.run("MTU1OTU3MTQ1OTEzNzk5OTAwOQ.GYDnAD.dGVcfwiNz1R2-ylTAY3IIENSW_EV9RpF-_31Pg")
+token = os.getenv("DISCORD_TOKEN")
+bot.run(token)
